@@ -16,8 +16,8 @@ $ dpn --help
     $ dpn [username]
 
   Options
-    --json     Output the result as JSON
-    --verbose  Show the name of the dependents
+    -j, --json     Output the result as JSON
+    -v, --verbose  Show the name of the dependents
 ```
 
 

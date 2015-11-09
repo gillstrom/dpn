@@ -36,7 +36,7 @@ module.exports = function (user) {
 
 	return getPackages(user).then(function (data) {
 		return Promise.all(data.map(function (el) {
-			return getDependents(el, ret).then(function (res) {
+			return getDependents(el).then(function (res) {
 				if (!res.length) {
 					return;
 				}
