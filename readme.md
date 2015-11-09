@@ -42,7 +42,7 @@ dpn('gillstrom').then(res => {
 
 ## API
 
-### dpn(username, [options])
+### dpn(username)
 
 #### username
 
