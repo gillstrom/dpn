@@ -1,6 +1,6 @@
 {
   "name": "dpn",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Get the dependents of a users npm modules",
   "license": "MIT",
   "repository": "gillstrom/dpn",
