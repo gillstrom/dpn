@@ -33,9 +33,9 @@ $ npm install --save dpn
 ```js
 const dpn = require('dpn');
 
-dpn('gillstrom').then(res => {
-	console.log(res);
-	//=> {'app-size': [ 'osx-app' ], 'array-max-length': [ 'get-arrows' ], 'battery-level': [ 'evac' ], ...}
+dpn('gillstrom').then(result => {
+	console.log(result);
+	//=> {'app-size': ['osx-app'], 'array-max-length': ['get-arrows'], 'battery-level': ['evac'], ...}
 });
 ```
 
@@ -43,6 +43,8 @@ dpn('gillstrom').then(res => {
 ## API
 
 ### dpn(username)
+
+Returns a promise that resolves to an object.
 
 #### username
 
