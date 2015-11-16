@@ -60,4 +60,4 @@ fn(cli.input[0]).then(function (res) {
 }).catch(function (err) {
 	console.log(chalk.bold.red(err));
 	process.exit();
-});;
+});
