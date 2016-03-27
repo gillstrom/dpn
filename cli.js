@@ -1,11 +1,10 @@
 #!/usr/bin/env node
 'use strict';
 var chalk = require('chalk');
-var elegantSpinner = require('elegant-spinner');
 var figures = require('figures');
 var indentString = require('indent-string');
-var logUpdate = require('log-update');
 var meow = require('meow');
+var ora = require('ora');
 var sortObject = require('sort-object');
 var fn = require('./');
 
@@ -25,14 +24,10 @@ var cli = meow([
 	}
 });
 
-var spinner;
+var spinner = ora('Loading dependents');
 
 if (!cli.flags.json) {
-	var frame = elegantSpinner();
-
-	spinner = setInterval(function () {
-		logUpdate(frame());
-	}, 75);
+	spinner.start();
 }
 
 fn(cli.input[0]).then(function (res) {
@@ -41,8 +36,7 @@ fn(cli.input[0]).then(function (res) {
 		process.exit();
 	}
 
-	clearInterval(spinner);
-	logUpdate();
+	spinner.stop();
 
 	res = sortObject(res, {
 		sort: function (a, b) {
