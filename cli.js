@@ -15,10 +15,12 @@ var cli = meow([
 	'',
 	'Options',
 	'  -j, --json     Output the result as JSON',
+	'  -r, --reverse  Reverse the result',
 	'  -v, --verbose  Show the name of the dependents'
 ], {
 	alias: {
 		j: 'json',
+		r: 'reverse',
 		v: 'verbose'
 	}
 });
@@ -44,7 +46,7 @@ fn(cli.input[0]).then(function (res) {
 
 	res = sortObject(res, {
 		sort: function (a, b) {
-			return res[a].length - res[b].length;
+			return cli.flags.reverse ? res[a].length - res[b].length : res[b].length - res[a].length;
 		}
 	});
 

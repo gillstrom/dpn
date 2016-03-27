@@ -17,6 +17,7 @@ $ dpn --help
 
   Options
     -j, --json     Output the result as JSON
+    -r, --reverse  Reverse the result
     -v, --verbose  Show the name of the dependents
 ```
 
