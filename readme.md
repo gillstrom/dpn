@@ -3,32 +3,6 @@
 > Get the dependents of a users npm modules
 
 
-## CLI
-
-```
-$ npm install --global dpn
-```
-
-```
-$ dpn --help
-
-  Usage
-    $ dpn [username]
-
-  Options
-    -j, --json     Output the result as JSON
-    -r, --reverse  Reverse the result
-    -v, --verbose  Show the name of the dependents
-```
-
-
-## Install
-
-```
-$ npm install --save dpn
-```
-
-
 ## Usage
 
 ```js
@@ -53,6 +27,11 @@ Returns a promise that resolves to an object.
 Type: `string`
 
 The username to look up.
+
+
+## Related
+
+* [dpn-cli](https://github.com/gillstrom/dpn-cli) - CLI for this module
 
 
 ## License

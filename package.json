@@ -9,7 +9,6 @@
     "email": "andreasgillstrom@gmail.com",
     "url": "github.com/gillstrom"
   },
-  "bin": "cli.js",
   "engines": {
     "node": ">=0.10.0"
   },
@@ -17,13 +16,9 @@
     "test": "xo && ava"
   },
   "files": [
-    "index.js",
-    "cli.js"
+    "index.js"
   ],
   "keywords": [
-    "app",
-    "cli",
-    "cli-app",
     "depend",
     "dependent",
     "dependents",
@@ -38,23 +33,12 @@
     "using"
   ],
   "dependencies": {
-    "chalk": "^1.1.1",
-    "figures": "^1.4.0",
-    "indent-string": "^2.1.0",
-    "meow": "^3.3.0",
     "npm-stats": "^1.1.0",
-    "ora": "^0.2.0",
-    "pify": "^2.3.0",
     "pinkie-promise": "^2.0.0",
     "sort-object": "^3.0.0"
   },
   "devDependencies": {
     "ava": "*",
     "xo": "*"
-  },
-  "xo": {
-    "ignores": [
-      "test.js"
-    ]
   }
 }
