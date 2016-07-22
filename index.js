@@ -1,50 +1,45 @@
 'use strict';
-var npmStats = require('npm-stats');
-var Promise = require('pinkie-promise');
-var sortObject = require('sort-object');
+const npmStats = require('npm-stats');
+const sortObject = require('sort-object');
 
-function getDependents(el) {
-	return new Promise(function (resolve, reject) {
-		npmStats().module(el).dependents(function (err, res) {
+const getDependents = el => new Promise((resolve, reject) => {
+	npmStats()
+		.module(el)
+		.dependents((err, res) => {
 			if (err) {
 				reject(err);
 			}
 
 			resolve(res);
 		});
-	});
-}
+});
 
-function getPackages(user) {
-	return new Promise(function (resolve, reject) {
-		npmStats().user(user).list(function (err, res) {
+const getPackages = user => new Promise((resolve, reject) => {
+	npmStats()
+		.user(user)
+		.list((err, res) => {
 			if (err) {
 				reject(err);
 			}
 
 			resolve(res);
 		});
-	});
-}
+});
 
-module.exports = function (user) {
-	var ret = {};
+module.exports = user => {
+	const ret = {};
 
 	if (!user) {
 		return Promise.reject(new Error('You have to provide a user'));
 	}
 
-	return getPackages(user).then(function (data) {
-		return Promise.all(data.map(function (el) {
-			return getDependents(el).then(function (res) {
-				if (!res.length) {
-					return;
-				}
+	return getPackages(user)
+		.then(data => Promise.all(data.map(el => getDependents(el).then(res => {
+			if (!res.length) {
+				return;
+			}
 
-				ret[el] = res;
-			});
-		})).then(function () {
-			return sortObject(ret);
-		});
-	});
+			ret[el] = res;
+		})))
+		.then(() => sortObject(ret)));
 };

@@ -23,7 +23,7 @@ Returns a promise that resolves to an object.
 
 #### username
 
-*Required*  
+*Required*<br>
 Type: `string`
 
 The username to look up.
