@@ -1,46 +1,43 @@
 {
-  "name": "dpn",
-  "version": "3.0.0",
-  "description": "Get the dependents of a users npm modules",
-  "license": "MIT",
-  "repository": "gillstrom/dpn",
-  "author": {
-    "name": "Andreas Gillström",
-    "email": "andreasgillstrom@gmail.com",
-    "url": "github.com/gillstrom"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "depend",
-    "dependent",
-    "dependents",
-    "get",
-    "module",
-    "modules",
-    "npm",
-    "use",
-    "user",
-    "username",
-    "users",
-    "using"
-  ],
-  "dependencies": {
-    "npm-stats": "^1.1.0",
-    "sort-object": "^3.0.0"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "xo": "*"
-  },
-  "xo": {
-    "esnext": true
-  }
+	"name": "dpn",
+	"version": "3.0.0",
+	"description": "Get the dependents of a users npm modules",
+	"license": "MIT",
+	"repository": "gillstrom/dpn",
+	"author": {
+		"name": "Andreas Gillström",
+		"email": "andreasgillstrom@gmail.com",
+		"url": "github.com/gillstrom"
+	},
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"depend",
+		"dependent",
+		"dependents",
+		"get",
+		"module",
+		"modules",
+		"npm",
+		"use",
+		"user",
+		"username",
+		"users",
+		"using"
+	],
+	"dependencies": {
+		"npm-stats": "^1.1.0",
+		"sort-object": "^3.0.0"
+	},
+	"devDependencies": {
+		"ava": "*",
+		"xo": "*"
+	}
 }
