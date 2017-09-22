@@ -35,7 +35,7 @@ module.exports = user => {
 
 	return getPackages(user)
 		.then(data => Promise.all(data.map(el => getDependents(el).then(res => {
-			if (!res.length > 0) {
+			if (res.length === 0) {
 				return;
 			}
 
