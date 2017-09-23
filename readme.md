@@ -2,6 +2,12 @@
 
 > Get the dependents of a users npm modules
 
+## Install
+
+```
+$ npm install dpn
+```
+
 
 ## Usage
 
@@ -36,4 +42,4 @@ The username to look up.
 
 ## License
 
-MIT © [Andreas Gillström](http://github.com/gillstrom)
+MIT © [Andreas Gillström](https://github.com/gillstrom)
